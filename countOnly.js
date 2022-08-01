@@ -22,20 +22,15 @@ const assertEqual = function(actual, expected) {
 //
 const countOnly = function(allItems, itemsToCount) {
   const newObject = {};
-  for (const item of allItems) {
+  for (let item of allItems) {
     console.log(item);
-    if (newObject[item]){
-      newObject[item] += 1;
-    } 
-      else {
-      newObject[item] = 1;
-    }
     if (itemsToCount[item]) {
-      newObject[item] += 1; 
-    } 
-      else {
+      if (newObject[item]) {
+        newObject[item] += 1; 
+      } else {
         newObject[item] = 1;
       }
+    }
   }
   return newObject;
 };
@@ -56,4 +51,5 @@ const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": t
 assertEqual(result1["Jason"], 1); //True 1 === 1
 assertEqual(result1["Karima"], undefined); //True undefined === undefined
 assertEqual(result1["Fang"], 2); //True 2 === 2
-assertEqual(result1["Aguohanna"], undefined); //False 1 !== undefined
+assertEqual(result1["Aguohanna"], undefined); //True 1 !== undefined
+console.log(countOnly);

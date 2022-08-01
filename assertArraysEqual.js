@@ -21,6 +21,5 @@ const assertArraysEqual = function(array1, array2) {
 }
 
 const a = [1, 2, 3];
-const b = [3, 4, 5];
-//console.log(eqArrays(a, b));
+const b = [3, 4, 5]
 assertArraysEqual(a, b);
