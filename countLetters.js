@@ -51,7 +51,7 @@ const without = function(source, itemsToRemove1) {
 // const newString = without(testString)
 
 
-const testString = without(("lighthouse in the house"), " ", "l");
+const testString = without(("lighthouse in the house"), " ");
 
 console.log(countLetters(testString));
 // console.log(countLetters(testString));
