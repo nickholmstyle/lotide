@@ -9,8 +9,14 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// const head = function (array) {
+//   newElement= array[0];
+//   return newElement;
+
+// };
+
 const head = function (array) {
-  newElement= array[0];
+  newElement = array.shift();
   return newElement;
 
 };
