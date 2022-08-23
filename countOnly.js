@@ -25,10 +25,14 @@ const countOnly = function(allItems, itemsToCount) {
   for (let item of allItems) {
     console.log(item);
     if (itemsToCount[item]) {
+      //If its true that [item] already exists in (itemsToCount) then...
       if (newObject[item]) {
+        //Its true if that [item] exist in (newObject) and if so...
         newObject[item] += 1; 
+        // add 1 to the count of the [item] in (newObject)
       } else {
         newObject[item] = 1;
+        //Otherwise the [item] which exists in (itemsToCount) exists within (newObject) with an initial value of 1.
       }
     }
   }
@@ -52,4 +56,5 @@ assertEqual(result1["Jason"], 1); //True 1 === 1
 assertEqual(result1["Karima"], undefined); //True undefined === undefined
 assertEqual(result1["Fang"], 2); //True 2 === 2
 assertEqual(result1["Aguohanna"], undefined); //True 1 !== undefined
-console.log(countOnly);
+
+console.log(countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Aguohanna": false}));

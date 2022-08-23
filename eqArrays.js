@@ -26,3 +26,4 @@ const eqArrays = function(a, b) {
 
 
 console.log(assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true));
+console.log(assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3])))

@@ -3,7 +3,7 @@ const eqArrays = function(a, b) {
   if (a === null || b === null) return false;
   if (a.length !== b.length) return false;
 
-  for (var i = 0; i < a.length; ++i) {
+  for (let i = 0; i < a.length; ++i) {
     if (a[i] !== b[i]) return false;
   
   }
@@ -20,6 +20,6 @@ const assertArraysEqual = function(array1, array2) {
    
 }
 
-const a = [1, 2, 3];
-const b = [3, 4, 5]
+const a = [4, 2, 4];
+const b = [4, 2, 4]
 assertArraysEqual(a, b);

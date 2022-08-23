@@ -5,41 +5,28 @@
 // need a variable to test, that will be a string
 // if the letter exists, return the indices
 
-// const eqArrays = function(a, b) {
-//   if (a === b) return true;
-//   if (a === null || b === null) return false;
-//   if (a.length !== b.length) return false;
+const eqArrays = function(a, b) {
+  if (a === b) return true;
+  if (a === null || b === null) return false;
+  if (a.length !== b.length) return false;
 
-//   for (var i = 0; i < a.length; ++i) {
-//     if (a[i] !== b[i]) return false;
+  for (var i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
   
-//   }
-//   return true;
-// };
-
-
-// const assertArraysEqual = function(array1, array2) {
-//   if (eqArrays(array1, array2) === false) {
-//     console.log("not equal arrays");
-//   } else {
-//     console.log("equal array")
-//   } 
-   
-// }
-
-const without = function(source, itemsToRemove1) {
-  const sourceCopy = [...source]
-  for (let s in sourceCopy) {
-    //console.log("about to compare", sourceCopy[s], s)
-    for (let r in itemsToRemove1) {
-      if (itemsToRemove1[r] === sourceCopy[s]) {
-        sourceCopy.splice(s, 1);
-      }
-    }
   }
-  return sourceCopy
-
+  return true;
 };
+
+
+const assertArraysEqual = function(array1, array2) {
+  if (eqArrays(array1, array2) === false) {
+    console.log("not equal arrays");
+  } else {
+    console.log("equal array")
+  } 
+   
+}
+
 
 const letterPositions = function(string) {
   const result = {};
@@ -47,17 +34,15 @@ const letterPositions = function(string) {
   for (let i = 0; i < string.length; i++) {
     //iterate through the input
     const letter = string[i];
-    // console.log("KEY: ", letter)
     // create a variable to store an object within an object.
     if (letter !== ' ') {
-    // console.log('---', letter)
       // create a condition that states if the "letter" is not a space then the code can continue to run.  
       if (result[letter]) {
         // if the key already exists 
         result[letter].push(i)
         // push the index value to that key
       } else {
-        result[letter] = [i];
+        result[letter] = [i]; 
         // push the new key
       }
      
@@ -68,8 +53,10 @@ const letterPositions = function(string) {
   return result;
 };
 
-const testString = "hello bye";
+const testString = "hello";
 console.log(letterPositions(testString));
+console.log(assertArraysEqual(letterPositions(testString), [1]));
+eqArrays
 
 
 

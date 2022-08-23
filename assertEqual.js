@@ -11,3 +11,4 @@ const assertEqual = function(actual, expected) {
 
 console.log(assertEqual("Sugar Shack", "Lighthouse Labs"));
 console.log(assertEqual(1, 1));
+

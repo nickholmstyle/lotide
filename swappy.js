@@ -4,7 +4,7 @@ const swapper = function(key1, object1, key2, object2) {
 let temp = object1[key1];
 
 object1[key1] = object2[key2];
-object2[key2] = thing;
+object2[key2] = temp;
 
   console.log('object1: ', object1);
   console.log('object2: ', object2);

@@ -14,7 +14,7 @@ const assertEqual = function(actual, expected) {
 // The first argument will be the string that hold the phrase.
 // 
 
-const countLetters = function(string, value) {
+const countLetters = function(string) {
   // console.log("INPUT: ", string)
   let letterCount = {};  
   for (let letter of string) {
@@ -53,5 +53,9 @@ const without = function(source, itemsToRemove1) {
 
 const testString = without(("lighthouse in the house"), " ");
 
+
+
+
 console.log(countLetters(testString));
 // console.log(countLetters(testString));
+
