@@ -9,6 +9,31 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+//Implement a function
+//INPUT: an object, and a value.
+//OUTPUT: return the first key that contains the given value or undefined if none.
+
+const findKeyByValue = function (obj, val) {
+  let result = undefined;
+  let objKeys = Object.keys(obj);
+  for (let key of objKeys) {
+    if (obj[key] === val) {
+      result = key
+    }
+  }
+  return result;
+}
+
+const bestTVShowsByGenre = { 
+  sci_fi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama:  "The Wire"
+};
+
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), "thriller");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "thriller");
 //Implement the function findKeyByValue which takes in an object and a value.
 
 //It should scan the object and return the first key which contains the given value.
@@ -19,16 +44,7 @@ const assertEqual = function(actual, expected) {
 // Consider using for...of to loop over the keys returned by Object.keys.
 
 
-const findKeyByValue = function(obj, val) {
-  let result = ""
-  let val = ""
-  const keysArr = Object.keys(obj);
-  
-  for (let keys of keysArr) {
-   
-   }
-  }
-}
+
 
 //If no key with the value is found return undefined and exit the loop.
 
@@ -46,14 +62,3 @@ const findKeyByValue = function(obj, val) {
   //return the key.
   //keys are strings within objects. 
   // for (let i = 0; i < val.length; i++) {}
-
-const bestTVShowsByGenre = { 
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
-
-console.log(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"))
-
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
