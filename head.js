@@ -1,11 +1,4 @@
-const assertEqual = require('./assertEqual.js');
-
-
-// const head = function (array) {
-//   newElement= array[0];
-//   return newElement;
-
-// };
+const assertEqual = require('./assertEqual');
 
 const head = function (array) {
   newElement = array.shift();
@@ -13,5 +6,12 @@ const head = function (array) {
 
 };
 
-module.exports = head
+module.exports = head;
+
+
+// const head = function (array) {
+//   newElement= array[0];
+//   return newElement;
+
+// };
 
