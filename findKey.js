@@ -40,3 +40,5 @@ results2 = findKey({
 
 assertEqual(results1, 'noma')
 assertEqual(results2, undefined)
+
+module.exports = findKey;

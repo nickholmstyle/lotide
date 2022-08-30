@@ -58,3 +58,5 @@ assertEqual(result1["Fang"], 2); //True 2 === 2
 assertEqual(result1["Aguohanna"], undefined); //True 1 !== undefined
 
 console.log(countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Aguohanna": false}));
+
+module.exports = countOnly;

@@ -34,6 +34,9 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), "thriller");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "thriller");
+
+module.exports = findKeyByValue;
+
 //Implement the function findKeyByValue which takes in an object and a value.
 
 //It should scan the object and return the first key which contains the given value.

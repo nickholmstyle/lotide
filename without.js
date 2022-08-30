@@ -37,6 +37,8 @@ const without = function(source, itemsToRemove) {
 console.log(assertArraysEqual((without([1, 2, 3], [1])), [2, 3])); // => [2, 3]
 console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
 
+module.exports = without;
+
 // about to compare 2 1
 // about to compare 3 2
 // about to compare undefined 3

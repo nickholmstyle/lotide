@@ -35,12 +35,9 @@ const letterPositions = function(string) {
     //iterate through the input
     const letter = string[i];
     // create a variable to store an object within an object.
-    console.log(result)
-    
     if (letter !== ' ') {
       // create a condition that states if the "letter" is not a space then the code can continue to run.  
       if (result[letter]) {
-      
         // if the key already exists 
         result[letter].push(i)
         // push the index value to that key
@@ -59,7 +56,8 @@ const letterPositions = function(string) {
 const testString = "hello";
 console.log(letterPositions(testString));
 console.log(assertArraysEqual(letterPositions(testString), [1]));
-eqArrays
+
+module.exports = letterPositions;
 
 
 

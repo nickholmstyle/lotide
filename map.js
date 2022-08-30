@@ -38,3 +38,5 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 assertArraysEqual(results1, results4)
+
+module.exports = map;
