@@ -1,0 +1,10 @@
+const findKeybyValue = function(obj, value) {
+  const keys = Object.keys(obj);
+  for (const key of keys) {
+    const element = obj[key];
+    if (element === value) {
+      return key;
+    }
+  }
+};
+
